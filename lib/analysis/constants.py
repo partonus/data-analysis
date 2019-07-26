@@ -40,3 +40,5 @@ B = T_STEP * B
 
 B_GRAV = np.zeros((12,1))
 B_GRAV[5] = -GRAVITY
+
+BOX_MASS = 0.01

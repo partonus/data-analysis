@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 def plot_vectors(*args, names=[]):
     f, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(20,10))
     for arg in args:
-        ax1.plot(arg[:,1])
-        ax2.plot(arg[:,2])
-        ax3.plot(arg[:,3])
+        ax1.plot(arg[:,0])
+        ax2.plot(arg[:,1])
+        ax3.plot(arg[:,2])
     ax1.set_title("x component")
     ax2.set_title("y component")
     ax3.set_title("z component")

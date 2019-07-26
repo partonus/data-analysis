@@ -10,6 +10,7 @@ VELOCITY = "velocity"
 WAYPOINT = "waypoint"
 CONTROL = "control"
 POSITION = "position"
+SIMULATOR_FULL_STATE = "simulator_full_state"
 
 #PHYSICAL PARAMETERS
 L = 0.033
@@ -18,10 +19,10 @@ INERTIA_XX = 16e-6
 INERTIA_YY = INERTIA_XX
 INERTIA_ZZ = 29e-6
 K = 0.01
-GRAVITY = 9.81
 
 # DYNAMICS
 # X_{t+1} = AX_t + BU_t + B_GRAV
+GRAVITY = 9.81
 A = np.zeros((12,12))
 A[0:3,3:6] = np.eye(3)
 A[3,7] = GRAVITY

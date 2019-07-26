@@ -1,0 +1,3 @@
+[submodule "lib/Multi_Drone_Control"]
+	path = lib/Multi_Drone_Control
+	url = git@github.com:GoldeneyeRohan/Multi_Drone_Control.git

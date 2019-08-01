@@ -2,18 +2,19 @@ import numpy as np
 from .constants import *
 import matplotlib.pyplot as plt 
 
-def plot_vectors(*args, names=[]):
+def plot_vectors(*args, names=[], title="", styles=[]):
     f, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(20,10))
     for arg in args:
         ax1.plot(arg[:,0])
         ax2.plot(arg[:,1])
         ax3.plot(arg[:,2])
-    ax1.set_title("x component")
-    ax2.set_title("y component")
-    ax3.set_title("z component")
+    ax1.set_title("{} x component".format(title))
+    ax2.set_title("{} y component".format(title))
+    ax3.set_title("{} z component".format(title))
     ax1.legend(names)
     ax2.legend(names)
     ax3.legend(names)
+    return ax1, ax2, ax3
 
 def pad_fd(data):
 	for k, v in data.items():
